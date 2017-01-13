@@ -25,16 +25,37 @@ The visual configuration - in `admin/plugins/adminstyles` - allows you to select
 
 ### Available styles
 
+#### Default
 ![Default](styles/images/grav_admin.png)
+
+#### Metal
 ![Metal](styles/images/metal.png)
+
+#### Light
 ![Light](styles/images/light.png)
+
+#### Stark Contrast
 ![Stark Contrast](styles/images/starkcontrast.png)
+
+#### Tan
 ![Tan](styles/images/tan.png)
+
+#### Grey
 ![Grey](styles/images/grey.png)
+
+#### Gold
 ![Gold](styles/images/gold.png)
+
+#### Navy Sunrise
 ![Navy Sunrise](styles/images/navy_sunrise.png)
+
+#### Antique
 ![Antique](styles/images/antique.png)
+
+#### Arctic
 ![Arctic](styles/images/arctic.png)
+
+#### Amber
 ![Amber](styles/images/amber.png)
 
 MIT License 2016 by [Ole Vik](http://github.com/olevik).
