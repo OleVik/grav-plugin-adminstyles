@@ -1,0 +1,30 @@
+{% extends "forms/field.html.twig" %}
+
+{% set originalValue = value %}
+{% set value = (value is null ? field.default : value) %}
+
+{% block input %}
+    {% for key, text in field.options %}
+        {% set id = field.id|default(field.name) ~ '-' ~ key %}
+        <span class="radio">
+          <div class="radioimage-selector">
+            <style>
+              .card-radioimage.{{ key|e }}::after {
+                background-image: url({{ url('plugin://adminstyles/styles/images') }}/{{ key }}.png);
+              }
+            </style>
+            <input type="radio"
+                   value="{{ key|e }}"
+                   id="{{ id|e }}"
+                   name="{{ (scope ~ field.name)|fieldName }}"
+                   {% if key == value %}checked="checked" {% endif %}
+                   {% if field.disabled or isDisabledToggleable %}disabled="disabled"{% endif %}
+                   {% if field.validate.required in ['on', 'true', 1] %}required="required"{% endif %}
+            />
+            <label class="card-radioimage {{ key|e }} {% if key == value %}active{% endif %}" for="{{ id|e }}">
+              <h5>{{ text|e }}{% if key == value %} - Active{% endif %}</h5>
+            </label>
+          </div>
+        </span>
+    {% endfor %}
+{% endblock %}

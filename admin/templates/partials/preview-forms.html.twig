@@ -1,0 +1,170 @@
+<form id="blueprints" method="post" data-grav-form="blueprints" data-grav-keepalive="true">
+  <div class="block block-section">
+    <h1>Defaults</h1>
+    <div class="form-section">
+      <div class="form-field grid">
+        <div class="form-label block size-1-3">
+          <label>
+            <span class="hint--bottom" data-hint="Default title for your site, often used in themes">Site Title</span>
+          </label>
+        </div>
+        <div class="form-data block size-2-3" data-grav-field="text" data-grav-disabled="" data-grav-default="null">
+          <div class="form-input-wrapper large ">
+            <input name="data[title]" value="Grav" type="text" placeholder="Site wide title">
+          </div>
+        </div>
+      </div>
+      <div class="form-field grid">
+        <div class="form-label block size-1-3">
+          <label>
+            <span class="hint--bottom" data-hint="A default author name, often used in themes or page content">Default Author</span>
+          </label>
+        </div>
+        <div class="form-data block size-2-3" data-grav-field="text" data-grav-disabled="" data-grav-default="null">
+          <div class="form-input-wrapper large ">
+            <input name="data[author][name]" value="Joe Bloggs" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="form-field grid">
+        <div class="form-label block size-1-3">
+          <label>
+            <span class="hint--bottom" data-hint="A default email to reference in themes or pages">Default Email</span>
+          </label>
+        </div>
+        <div class="form-data block size-2-3" data-grav-field="text" data-grav-disabled="" data-grav-default="null">
+          <div class="form-input-wrapper large ">
+            <input name="data[author][email]" value="joe@test.com" type="text">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block block-section">
+    <h1>Page Summary</h1>
+    <div class="form-section">
+      <div class="form-field grid">
+        <div class="form-label block size-1-3">
+          <label>
+            <span class="hint--bottom" data-hint="Enable page summary (the summary returns the same as the page content)">Enabled</span>
+          </label>
+        </div>
+        <div class="form-data block size-2-3" data-grav-field="toggle" data-grav-disabled="" data-grav-default="null" data-grav-field-name="data[summary][enabled]">
+          <div class="switch-toggle switch-grav  switch-2">
+            <input type="radio" value="1" id="toggle_summary.enabled1" name="data[summary][enabled]" class="highlight" checked="checked">
+            <label for="toggle_summary.enabled1">Yes</label>
+            <input type="radio" value="0" id="toggle_summary.enabled0" name="data[summary][enabled]" class="">
+            <label for="toggle_summary.enabled0">No</label>
+            <a></a>
+          </div>
+        </div>
+      </div>
+      <div class="form-field grid">
+        <div class="form-label block size-1-3">
+          <label>
+            <span class="hint--bottom" data-hint="The amount of characters of a page to use as a content summary">Summary Size</span>
+          </label>
+        </div>
+        <div class="form-data block size-2-3" data-grav-field="text" data-grav-disabled="" data-grav-default="null">
+          <div class="form-input-wrapper x-small form-input-addon-wrapper">
+            <input name="data[summary][size]" value="300" type="text">
+            <div class="form-input-addon form-input-append"> characters</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-field grid">
+        <div class="form-label block size-1-3">
+          <label>
+            <span class="hint--bottom" data-hint="short = use the first occurrence of delimiter or size; long = summary delimiter will be ignored">Format</span>
+          </label>
+        </div>
+        <div class="form-data block size-2-3" data-grav-field="toggle" data-grav-disabled="" data-grav-default="null" data-grav-field-name="data[summary][format]">
+          <div class="switch-toggle switch-grav  switch-2">
+            <input type="radio" value="short" id="toggle_summary.formatshort" name="data[summary][format]" class="highlight" checked="checked">
+            <label for="toggle_summary.formatshort">Short</label>
+            <input type="radio" value="long" id="toggle_summary.formatlong" name="data[summary][format]" class="">
+            <label for="toggle_summary.formatlong">Long</label>
+            <a></a>
+          </div>
+        </div>
+      </div>
+      <div class="form-field grid">
+        <div class="form-label block size-1-3">
+          <label>
+            <span class="hint--bottom" data-hint="The summary delimiter (default '===')">Delimiter</span>
+          </label>
+        </div>
+        <div class="form-data block size-2-3" data-grav-field="text" data-grav-disabled="" data-grav-default="null">
+          <div class="form-input-wrapper x-small ">
+            <input name="data[summary][delimiter]" value="===" type="text">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block block-section">
+    <h1>Metadata</h1>
+    <div class="form-section">
+      <div class="form-field grid">
+        <div class="form-label block size-1-3">
+          <label>
+            <span class="hint--bottom" data-hint="Default metadata values that will be displayed on every page unless overridden by the page">Metadata</span>
+          </label>
+        </div>
+        <div class="form-data block size-2-3" data-grav-array-name="data[metadata]" data-grav-array-keyname="Key (e.g. 'Keywords')" data-grav-array-valuename="Value (e.g. 'Blog, Grav')" data-grav-field="array" data-grav-disabled="" data-grav-default="null">
+          <div data-grav-array-type="container" class="one-child">
+            <div class="form-row" data-grav-array-type="row">
+              <span data-grav-array-action="sort" class="fa fa-bars"></span>
+              <input data-grav-array-type="key" type="text" value="description" placeholder="Key (e.g. 'Keywords')">
+              <input data-grav-array-type="value" type="text" name="data[metadata][description]" placeholder="Value (e.g. 'Blog, Grav')" value="Grav is an easy to use, yet powerful, open source flat-file CMS">
+              <span data-grav-array-action="rem" class="fa fa-minus"></span>
+              <span data-grav-array-action="add" class="fa fa-plus"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block block-section">
+    <h1>Redirects &amp; Routes</h1>
+    <div class="form-section">
+      <div class="form-field grid">
+        <div class="form-label block size-1-3">
+          <label>
+            <span class="hint--bottom" data-hint="routes to redirect to other pages. Standard Regex replacement is valid">Custom Redirects</span>
+          </label>
+        </div>
+        <div class="form-data block size-2-3" data-grav-array-name="data[redirects]" data-grav-array-keyname="/your/alias" data-grav-array-valuename="/your/redirect" data-grav-field="array" data-grav-disabled="" data-grav-default="null">
+          <div data-grav-array-type="container" class="one-child">
+            <div class="form-row" data-grav-array-type="row">
+              <span data-grav-array-action="sort" class="fa fa-bars"></span>
+              <input data-grav-array-type="key" type="text" placeholder="/your/alias">
+              <input data-grav-array-type="value" type="text" name="data[redirects]" placeholder="/your/redirect">
+              <span data-grav-array-action="rem" class="fa fa-minus"></span>
+              <span data-grav-array-action="add" class="fa fa-plus"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-field grid">
+        <div class="form-label block size-1-3">
+          <label>
+            <span class="hint--bottom" data-hint="routes to alias to other pages. Standard Regex replacement is valid">Custom Routes</span>
+          </label>
+        </div>
+        <div class="form-data block size-2-3" data-grav-array-name="data[routes]" data-grav-array-keyname="/your/alias" data-grav-array-valuename="/your/route" data-grav-field="array" data-grav-disabled="" data-grav-default="null">
+          <div data-grav-array-type="container" class="one-child">
+            <div class="form-row" data-grav-array-type="row">
+              <span data-grav-array-action="sort" class="fa fa-bars"></span>
+              <input data-grav-array-type="key" type="text" placeholder="/your/alias">
+              <input data-grav-array-type="value" type="text" name="data[routes]" placeholder="/your/route">
+              <span data-grav-array-action="rem" class="fa fa-minus"></span>
+              <span data-grav-array-action="add" class="fa fa-plus"></span>
+            </div>    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <input data-grav-field="hidden" data-grav-disabled="false" type="hidden" class="input" name="data[_json][blog]" value="{&quot;route&quot;:&quot;\/blog&quot;}">
+    <input type="hidden" id="admin-nonce" name="admin-nonce" value="480c6253b55ce3ded3fad12e49c89353">
+  </form>
