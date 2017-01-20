@@ -1,10 +1,8 @@
 # [Grav](http://getgrav.org/) Admin Styles Plugin
 
-Adds a small variety of custom styles to the [Admin-plugin](https://github.com/getgrav/grav-plugin-admin/), by injecting CSS-files which override the default. All styles are based on the default style for the Admin-plugin, but do not altar it.
+Adds a variety of custom styles to the [Admin-plugin](https://github.com/getgrav/grav-plugin-admin/), by injecting CSS-files which override the default. All styles are based on the default style for the Admin-plugin, but do not altar it.
 
 All styles are generated from Sass/SCSS, and the compiled files are compressed and the corresponding `.map.css`-files included.
-
-**Note**: This is a pre-release, and somewhat of a work in progress. Please report any issues or inconsistencies through the [issue-tracker](https://github.com/olevik/grav-plugin-adminstyles/issues).
 
 # Installation and Configuration
 

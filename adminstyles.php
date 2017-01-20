@@ -64,7 +64,7 @@ class AdminStylesPlugin extends Plugin {
 		$pluginsobject = (array) $this->config->get('plugins');
 		if (isset($pluginsobject['adminstyles'])) {
 			if ($pluginsobject['adminstyles']['enabled'] && $pluginsobject['adminstyles']['preview']) {
-				$this->grav['twig']->plugins_hooked_nav['adminstyles.PREVIEW.TITLE'] = ['route' => $this->route, 'icon' => 'fa-th-list'];
+				$this->grav['twig']->plugins_hooked_nav['ADMINSTYLES.PREVIEW.TITLE'] = ['route' => $this->route, 'icon' => 'fa-th-list'];
 			}
 		}
 	}

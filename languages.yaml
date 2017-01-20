@@ -3,8 +3,9 @@ en:
     PREVIEW:
       TITLE: Style Preview
       INTRODUCTION: This page shows a preview of various HTML-elements and components used in the Admin-plugin, facilitating easier testing of new styles and a complete overview of their visual impact, as close as possible to how they appear in the interface.
-      BUTTON_DASHBOARD: Dashboard
-      BUTTON_PLUGIN: Plugin Options
+      BUTTON:
+        DASHBOARD: Dashboard
+        PLUGIN: Plugin Options
       TOC: Table of Contents:
       WIDGETS:
         TITLE: Widgets

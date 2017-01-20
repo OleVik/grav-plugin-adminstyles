@@ -56,8 +56,8 @@ $update-bg:                     $theme-slate !default;
 $update-text:                   $theme-whitish !default;
 
 // Critical
-$critical-bg:                   $theme-slate !default;
-$critical-text:                 $theme-whitish !default;
+$critical-bg:                   darken(desaturate(red, 38), 25) !default;
+$critical-text:                 $theme-text-alt !default;
 
 // Calculated values
 $primary-accent:                primary !default;
@@ -994,7 +994,7 @@ form {
     }
 
     a {
-        color: darken($notice-text, 2%);
+        color: darken($notice-text, 10%);
         &:hover {
             color: $notice-text;
         }
@@ -1010,7 +1010,7 @@ form {
 }
 
 .error, .warning {
-    background: $critical-bg;
+    background: desaturate($critical-bg, 28);
     color: $critical-text;
 
     &.alert {
@@ -1027,6 +1027,18 @@ form {
     a.button, span.button, button.button {
         @include button-color(shade($critical-bg, 20%), $critical-text, true);
     }
+}
+.notice.error {
+    background: darken(desaturate(red, 38), 25);
+}
+.notice.warning {
+    background: darken(desaturate(orange, 38), 25);
+}
+.notice.alert {
+    background: darken($notice-bg, 18);
+}
+.notice.success {
+    background: darken(desaturate(green, 38), 3);
 }
 
 .error-reverse, .warning-reverse {

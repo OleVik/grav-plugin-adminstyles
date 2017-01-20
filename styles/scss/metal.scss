@@ -1007,7 +1007,7 @@ form {
 }
 
 .error, .warning {
-    background: desaturate($critical-bg, 18);
+    background: desaturate($critical-bg, 28);
     color: $critical-text;
 
     &.alert {
@@ -1032,7 +1032,7 @@ form {
     background: darken($notice-bg, 8);
 }
 .notice.success {
-    background: adjust-hue(desaturate($critical-bg, 18), 119);
+    background: adjust-hue(desaturate($critical-bg, 38), 119);
 }
 
 .error-reverse, .warning-reverse {

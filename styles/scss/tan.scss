@@ -52,8 +52,8 @@ $notice-bg:                     $theme-shadow !default;
 $notice-text:                   $theme-text-alt !default;
 
 // Updates
-$update-bg:                     $theme-platinum !default;
-$update-text:                   $theme-dark-puce !default;
+$update-bg:                     $theme-dark-puce !default;
+$update-text:                   $theme-platinum !default;
 
 // Critical
 $critical-bg:                   adjust-color($theme-dark-puce, $red: 50) !default;
@@ -89,7 +89,7 @@ $theme-dark-puce: #4f473f; // Dark Puce */
     color: saturate($theme-silver-chalice, 50%);
 }
 .pages-list .page-icon.not-visible {
-    color: saturate($theme-platinum, 50%);
+    color: darken(desaturate($theme-platinum, 50%), 25);
 }
 .pages-list .page-icon.modular {
     color: saturate($theme-dark-puce, 50%);
@@ -1031,6 +1031,15 @@ form {
     a.button, span.button, button.button {
         @include button-color(shade($critical-bg, 20%), $critical-text, true);
     }
+}
+.notice.warning {
+    background: adjust-hue(saturate($critical-bg, 18), 37);
+}
+.notice.alert {
+    background: $notice-bg;
+}
+.notice.success {
+    background: adjust-hue($critical-bg, 119);
 }
 
 .error-reverse, .warning-reverse {

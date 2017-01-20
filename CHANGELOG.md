@@ -1,3 +1,12 @@
+# v1.0.0
+## 20/Jan/2017
+1. [](#improved)
+    * Consistency of theme elements
+    * Corrected README for release
+2. [](#bugfix)
+    * Statistics-widget preview
+    * Corrected references to and in languages.yaml
+
 # v0.9.2
 ## 19/Jan/2017
 1. [](#bugfix)

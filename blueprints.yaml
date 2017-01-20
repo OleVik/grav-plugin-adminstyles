@@ -1,5 +1,5 @@
 name: Admin Styles
-version: 0.9.2
+version: 1.0.0
 description: "Adds multiple custom styles for the admin plugin's interface."
 icon: asterisk
 author:
@@ -55,6 +55,6 @@ form:
             grey: Grey
             gold: Gold
             navy_sunrise: Navy Sunrise
-            antique: Antique
             arctic: Arctic
             amber: Amber
+            antique: Antique
