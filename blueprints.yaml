@@ -1,7 +1,7 @@
 name: Admin Styles
-version: 1.0.0
+version: 1.0.1
 description: "Adds multiple custom styles for the admin plugin's interface."
-icon: asterisk
+icon: css3
 author:
   name: Ole Vik
   email: git@olevik.me
