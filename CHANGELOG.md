@@ -1,3 +1,15 @@
+# v1.0.2
+## 24-02-2017
+
+1. [](#new)
+    * Range-field compatibility
+    * Inline documentation
+2. [](#improved)
+    * Improve template paths
+    * Code cleanup
+3. [](#bugfix)
+    * Bump Grav dependencies
+
 # v1.0.1
 ## 24-02-2017
 

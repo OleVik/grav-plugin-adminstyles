@@ -414,6 +414,30 @@ form .file-thumbnail-remove {
     background: #ffffff; }
     form .file-thumbnail-remove:hover .fa {
       color: #262626; }
+form input[type=range]::-webkit-slider-runnable-track {
+  background: #fafafa;
+  border: 1px solid #e6e6e6; }
+form input[type=range]::-webkit-slider-thumb {
+  border: 1px solid #e6e6e6;
+  background: #262626; }
+form input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #fafafa; }
+form input[type=range]::-moz-range-track {
+  background: #fafafa;
+  border: 1px solid #e6e6e6; }
+form input[type=range]::-moz-range-progress {
+  background: #fafafa; }
+form input[type=range]::-moz-range-thumb {
+  border: 1px solid #e6e6e6;
+  background: #262626; }
+form input[type=range]::-ms-fill-lower, form input[type=range]::-ms-fill-upper {
+  background: #fafafa;
+  border: 1px solid #e6e6e6; }
+form input[type=range]::-ms-thumb {
+  border: 1px solid #e6e6e6;
+  background: #262626; }
+form input[type=range]:focus::-ms-fill-lower, form input[type=range]:focus::-ms-fill-upper {
+  background: #fafafa; }
 
 .grav-editor-resizer {
   background-color: #d5d5d5;

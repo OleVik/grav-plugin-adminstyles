@@ -1,5 +1,5 @@
 name: Admin Styles
-version: 1.0.1
+version: 1.0.2
 description: "Adds multiple custom styles for the admin plugin's interface."
 icon: css3
 author:
@@ -10,6 +10,9 @@ homepage: https://github.com/olevik/grav-plugin-adminstyles
 keywords: admin, admin-plugin, style, styles
 bugs: https://github.com/olevik/grav-plugin-adminstyles/issues
 license: MIT
+dependencies:
+  - { name: grav, version: '~1' }
+  - { name: admin, version: '>=1.3' }
 
 form:
   validation: loose
