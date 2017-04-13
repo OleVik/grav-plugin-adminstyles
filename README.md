@@ -56,4 +56,4 @@ The visual configuration - in `admin/plugins/adminstyles` - allows you to select
 #### Amber
 ![Amber](styles/images/amber.png)
 
-MIT License 2016 by [Ole Vik](http://github.com/olevik).
+MIT License 2017 by [Ole Vik](http://github.com/olevik).

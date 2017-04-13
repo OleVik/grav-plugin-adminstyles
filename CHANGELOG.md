@@ -1,3 +1,13 @@
+# v1.1.0
+## 13-04-2017
+
+1. [](#new)
+    * 'current'-option to define Style-picker
+    * getConfigType-method to retrieve 'type' from configuration
+2. [](#bugfix)
+    * onAdminTwigTemplatePaths priority
+    * RadioImage-template values
+
 # v1.0.2
 ## 24-02-2017
 

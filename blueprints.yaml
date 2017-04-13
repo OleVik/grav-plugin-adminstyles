@@ -1,5 +1,5 @@
 name: Admin Styles
-version: 1.0.2
+version: 1.1.0
 description: "Adds multiple custom styles for the admin plugin's interface."
 icon: css3
 author:
@@ -37,14 +37,24 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
+    type:
+      type: select
+      size: long
+      label: Style-picker
+      description: Choose between the visual Style-picker or the simple Select-field.
+      default: radioimage
+      options:
+        radioimage: Radio Image
+        select: Select-field
     header:
       type: section
-      title: Theme
+      title: Style
       underline: false
-      text: Select a style for the admin interface by clicking your preferred appearence, and then click the "Save"-button.
+      text: 'Select your preferred style for the Admin-interface, then click the "Save"-button.'
       fields:
         current:
           type: radioimage
+          @data-type: '\Grav\Plugin\AdminStylesPlugin::getConfigType'
           classes: fancy
           name: current
           style: vertical

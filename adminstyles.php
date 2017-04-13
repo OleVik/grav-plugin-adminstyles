@@ -50,6 +50,14 @@ class AdminStylesPlugin extends Plugin
         return $config;
     }
 
+    /**
+     * Get type-configuration from plugin
+     * @return string Type-field from config
+     */
+    public static function getConfigType()
+    {
+        return Grav::instance()['config']->get('plugins.adminstyles.type');
+    }
 
     /**
      * Register events and route with Grav
@@ -68,7 +76,7 @@ class AdminStylesPlugin extends Plugin
             $this->enable([
                 'onAdminMenu' => ['onAdminMenu', 0],
                 'onPageInitialized' => ['onPageInitialized', 0],
-                'onAdminTwigTemplatePaths' => ['onAdminTwigTemplatePaths', 0]
+                'onAdminTwigTemplatePaths' => ['onAdminTwigTemplatePaths', -1]
             ]);
             if (strpos($uri->path(), $this->config->get('plugins.admin.route') . '/' . $this->route) === false) {
                 return;
