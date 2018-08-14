@@ -1,0 +1,18 @@
+{% extends "forms/field.html.twig" %}
+
+{% block prepend %}{% endblock %}
+
+{% block input_attributes %}{% endblock %}
+
+{% block input %}
+    {% for key, value in field.options %}
+        <div class="form-field grid">
+            <a 
+            class="button" 
+            href="admin/adminstyles-compile?compile={{ key|underscorize }}"
+            >{% if field.value %}{{ field.value }}{% endif %} {{ value }}</a>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block append %}{% endblock %}

@@ -1,0 +1,57 @@
+// Load Third Party Libraries
+@import "base/configuration/template/base";
+@import "base/template/modules/bourbon_essentials";
+@import "base/template/modules/buttons";
+
+// Theme
+$theme-main: #65737E;
+$theme-secondary: #96B5B4;
+$theme-main-alt: #65737E;
+$theme-secondary-alt: #2B303B;
+$theme-text: #2B303B;
+$theme-text-alt: #C0C5CE;
+$theme-background: #2B303B;
+@import "../variables.scss";
+
+$nav-bg: #8FA1B3;
+$nav-link: lighten(#C0C5CE, 16%);
+$nav-selected-bg: darken(#8FA1B3, 8%);
+$nav-hover-bg: #C0C5CE;
+$nav-hover-link: #C0C5CE;
+$logo-link: lighten(#C0C5CE, 16%);
+$page-text: #96B5B4;
+$page-link: darken(#96B5B4, 15%);
+
+// 'Manage Pages'-specific overrides
+.pages-list .page-icon {
+  color: saturate($theme-main, 25%);
+}
+.pages-list .page-icon.not-routable {
+  color: saturate($theme-secondary, 25%);
+}
+.pages-list .page-icon.not-visible {
+  color: lighten($theme-main-alt, 15%);
+}
+.pages-list .page-icon.modular {
+  color: adjust-hue(saturate($theme-main, 25%), 180deg);
+}
+
+@import "base/preset.scss";
+@import "../overrides.scss";
+
+#admin-main .titlebar {
+  text-shadow:
+    -1px -1px 0 rgba(darken(#B48EAD, 15%), 0.1),
+    1px -1px 0 rgba(darken(#B48EAD, 15%), 0.1),
+    -1px 1px 0 rgba(darken(#B48EAD, 15%), 0.1),
+    1px 1px 0 rgba(darken(#B48EAD, 15%), 0.1);
+}
+#admin-main .titlebar .button-bar .button {
+  color: mix(#EBCB8B, $button-text, 7.5%);
+}
+.gpm .gpm-item-info .gpm-item-icon {
+  color: rgba(#BF616A, 0.2);
+}
+#admin-dashboard .primary-accent .chart-loader .ct-label {
+  color: #C0C5CE;
+}

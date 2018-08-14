@@ -1,0 +1,81 @@
+// Load Third Party Libraries
+@import "base/configuration/template/base";
+@import "base/template/modules/bourbon_essentials";
+@import "base/template/modules/buttons";
+
+// Theme: Stark Contrast
+$theme-slate: #262626; // Slate
+$theme-secondhand-grey: #3f3f3f; // Secondhand Grey
+$theme-light-grey: #b2b2b2; // Light Grey
+$theme-whitish: #f5f5f5; // Whitish
+$theme-background: $theme-whitish; // Whitish
+$theme-text: #000000; // Black
+$theme-text-alt: #ffffff; // White
+
+// Logo
+$logo-bg:                       $theme-slate !default;
+$logo-link:                     $theme-text-alt !default;
+
+// Nav
+$nav-bg:                        $theme-slate !default;
+$nav-text:                      $theme-text-alt !default;
+$nav-link:                      darken($theme-text-alt, 8%) !default;
+$nav-selected-bg:               darken($theme-slate, 8%) !default;
+$nav-selected-link:             $theme-text-alt !default;
+$nav-hover-bg:                  lighten($theme-slate, 8%) !default;
+$nav-hover-link:                $theme-text-alt !default;
+
+// Toolbar
+$toolbar-bg:                    $theme-secondhand-grey !default;
+$toolbar-text:                  $theme-whitish !default;
+
+// Page
+$page-bg:                       $theme-background !default;
+$page-text:                     $theme-slate !default;
+$page-link:                     $theme-text !default;
+
+// Content
+$content-bg:                    $theme-text-alt !default;
+$content-text:                  $theme-slate !default;
+$content-link:                  darken($theme-slate, 10%) !default;
+$content-link2:                 darken($theme-slate, 20%) !default;
+$content-header:                $theme-slate !default;
+$content-tabs-bg:               $theme-secondhand-grey !default;
+$content-tabs-text:             $theme-whitish !default;
+
+// Buttons
+$button-bg:                     $theme-slate !default;
+$button-text:                   $theme-text-alt !default;
+
+// Notice
+$notice-bg:                     $theme-light-grey !default;
+$notice-text:                   $theme-text-alt !default;
+
+// Updates
+$update-bg:                     $theme-slate !default;
+$update-text:                   $theme-whitish !default;
+
+// Critical
+$critical-bg:                   darken(desaturate(red, 38), 25) !default;
+$critical-text:                 $theme-text-alt !default;
+
+// Calculated values
+$primary-accent:                primary !default;
+$secondary-accent:              secondary !default;
+$tertiary-accent:               tertiary !default;
+
+// Initial values
+$primary-accent-bg:             $theme-slate;
+$primary-accent-fg:             $theme-text-alt;
+$secondary-accent-bg:           $theme-secondhand-grey;
+$secondary-accent-fg:           $theme-text-alt;
+$tertiary-accent-bg:            $theme-light-grey;
+$tertiary-accent-fg:            $theme-text-alt;
+
+// Popularity-dashboard text color
+.ct-label {
+    fill: $theme-slate;
+    color: $theme-slate;
+}
+
+@import "base/preset.scss";

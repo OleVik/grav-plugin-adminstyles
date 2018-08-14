@@ -1,73 +1,157 @@
 name: Admin Styles
-version: 1.1.1
-description: "Adds multiple custom styles for the admin plugin's interface."
+version: 2.0.0
+description: "Adds custom styles for Grav's Admin interface."
 icon: css3
 author:
   name: Ole Vik
   email: git@olevik.me
   url: http://olevik.me
 homepage: https://github.com/olevik/grav-plugin-adminstyles
-keywords: admin, admin-plugin, style, styles
+keywords: admin, admin-plugin, style, styles, custom, custom style
 bugs: https://github.com/olevik/grav-plugin-adminstyles/issues
 license: MIT
 dependencies:
-  - { name: grav, version: '~1' }
-  - { name: admin, version: '>=1.3' }
+  - { name: grav, version: '~1.5' }
+  - { name: admin, version: '>=1.8' }
 
 form:
   validation: loose
   fields:
-    enabled:
-      type: toggle
-      label: Plugin Status
-      highlight: 1
-      default: 1
-      options:
-        1: PLUGIN_ADMIN.ENABLED
-        0: PLUGIN_ADMIN.DISABLED
-      validate:
-        type: bool
-    preview:
-      type: toggle
-      label: Theme Preview Page
-      highlight: 1
-      default: 1
-      options:
-        1: PLUGIN_ADMIN.ENABLED
-        0: PLUGIN_ADMIN.DISABLED
-      validate:
-        type: bool
-    type:
-      type: select
-      size: long
-      label: Style-picker
-      description: Choose between the visual Style-picker or the simple Select-field.
-      default: radioimage
-      options:
-        radioimage: Radio Image
-        select: Select-field
-    header:
-      type: section
-      title: Style
-      underline: false
-      text: 'Select your preferred style for the Admin-interface, then click the "Save"-button.'
+    tabs:
+      type: tabs
+      active: 1
       fields:
-        current:
-          type: radioimage
-          @data-type: '\Grav\Plugin\AdminStylesPlugin::getConfigType'
-          classes: fancy
-          name: current
-          style: vertical
-          default: grav_admin
-          options:
-            grav_admin: Default
-            metal: Metal
-            light: Light
-            starkcontrast: Stark Contrast
-            tan: Tan
-            grey: Grey
-            gold: Gold
-            navy_sunrise: Navy Sunrise
-            arctic: Arctic
-            amber: Amber
-            antique: Antique
+        options:
+          title: PLUGIN_ADMINSTYLES.OPTIONS.NAME
+          type: tab
+          fields:
+            enabled:
+              type: toggle
+              label: PLUGIN_ADMINSTYLES.OPTIONS.PLUGIN_STATUS
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+            preview:
+              type: toggle
+              label: PLUGIN_ADMINSTYLES.OPTIONS.PREVIEW
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+            type:
+              type: select
+              size: long
+              label: PLUGIN_ADMINSTYLES.OPTIONS.TYPE.LABEL
+              description: PLUGIN_ADMINSTYLES.OPTIONS.TYPE.DESCRIPTION
+              default: radioimage
+              options:
+                radioimage: PLUGIN_ADMINSTYLES.OPTIONS.TYPE.RADIOIMAGE
+                select: PLUGIN_ADMINSTYLES.OPTIONS.TYPE.SELECT
+            header:
+              type: section
+              title: PLUGIN_ADMINSTYLES.OPTIONS.STYLE.NAME
+              underline: false
+              text: PLUGIN_ADMINSTYLES.OPTIONS.STYLE.TEXT
+              fields:
+                current:
+                  type: radioimage
+                  data-type@: '\Grav\Plugin\AdminStylesPlugin::getConfigType'
+                  classes: fancy
+                  name: current
+                  style: vertical
+                  default: grav_admin
+                  data-options@: '\Grav\Plugin\AdminStylesPlugin::getStyles'
+        custom:
+          title: PLUGIN_ADMINSTYLES.CUSTOM.NAME
+          type: tab
+          fields:
+            custom_styles: 
+              name: styles
+              type: list
+              style: vertical
+              label: PLUGIN_ADMINSTYLES.CUSTOM.LABEL
+              fields:
+                .name:
+                  type: text
+                  label: PLUGIN_ADMINSTYLES.CUSTOM.FIELDS.NAME.LABEL
+                  validate:
+                    required: true
+                .main:
+                  type: colorpicker
+                  label: PLUGIN_ADMINSTYLES.CUSTOM.FIELDS.MAIN.LABEL
+                  validate:
+                    required: true
+                .secondary:
+                  type: colorpicker
+                  label: PLUGIN_ADMINSTYLES.CUSTOM.FIELDS.SECONDARY.LABEL
+                  validate:
+                    required: true
+                .main_alt:
+                  type: colorpicker
+                  label: PLUGIN_ADMINSTYLES.CUSTOM.FIELDS.MAIN_ALT.LABEL
+                  validate:
+                    required: true
+                .secondary_alt:
+                  type: colorpicker
+                  label: PLUGIN_ADMINSTYLES.CUSTOM.FIELDS.SECONDARY_ALT.LABEL
+                  validate:
+                    required: true
+                .text:
+                  type: colorpicker
+                  label: PLUGIN_ADMINSTYLES.CUSTOM.FIELDS.TEXT.LABEL
+                  validate:
+                    required: true
+                .text_alt:
+                  type: colorpicker
+                  label: PLUGIN_ADMINSTYLES.CUSTOM.FIELDS.TEXT_ALT.LABEL
+                  validate:
+                    required: true
+                .background:
+                  type: colorpicker
+                  label: Background color
+                  validate:
+                    required: true
+                .image:
+                  type: file
+                  label: PLUGIN_ADMINSTYLES.CUSTOM.FIELDS.IMAGE.LABEL
+                  help: PLUGIN_ADMINSTYLES.CUSTOM.FIELDS.IMAGE.HELP
+                  destination: 'user/data/adminstyles/styles/images'
+                  accept:
+                    - image/png
+                .override:
+                  type: editor
+                  label: PLUGIN_ADMINSTYLES.CUSTOM.FIELDS.OVERRIDE.LABEL
+                  help: PLUGIN_ADMINSTYLES.CUSTOM.FIELDS.OVERRIDE.HELP
+                  vertical: true
+                  autofocus: false
+                  codemirror:
+                    mode: 'sass'
+                    indentUnit: 4
+                    autofocus: false
+                    indentWithTabs: false
+                    lineNumbers: true
+                    styleActiveLine: true
+                    gutters: ['CodeMirror-lint-markers']
+                    lint: true
+        compile:
+          title: PLUGIN_ADMINSTYLES.COMPILE.NAME
+          type: tab
+          fields:
+            compilesection:
+              type: section
+              title: PLUGIN_ADMINSTYLES.COMPILE.SECTION.TITLE
+              underline: false
+              text: PLUGIN_ADMINSTYLES.COMPILE.SECTION.TEXT
+              fields:
+                compile:
+                  type: compile
+                  label: Compile
+                  value: Compile
+                  data-options@: '\Grav\Plugin\AdminStylesPlugin::getStyles'

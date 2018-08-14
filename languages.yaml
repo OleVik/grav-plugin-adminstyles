@@ -1,12 +1,55 @@
 en:
-  ADMINSTYLES:
+  PLUGIN_ADMINSTYLES:
+    OPTIONS:
+      NAME: Options
+      PLUGIN_STATUS: Plugin Status
+      PREVIEW: Theme Preview Page
+      TYPE:
+        LABEL: Style-picker
+        DESCRIPTION: Choose between the visual Style-picker or the simple Select-field.
+        RADIOIMAGE: Radio Image
+        SELECT: Select-field
+      STYLE:
+        NAME: Style
+        TEXT: 'Select your preferred style for the Admin-interface, then click the "Save"-button.'
+    CUSTOM:
+      NAME: Custom
+      LABEL: Custom Styles
+      FIELDS:
+        NAME:
+          LABEL: Name
+        MAIN:
+          LABEL: Main color
+        SECONDARY:
+          LABEL: Secondary color
+        MAIN_ALT:
+          LABEL: Alternate main color
+        SECONDARY_ALT:
+          LABEL: Alternate secondary color
+        TEXT:
+          LABEL: Text color
+        TEXT_ALT:
+          LABEL: Alternate text color
+        BACKGROUND:
+          LABEL: Background color
+        IMAGE:
+          LABEL: Preview Image
+          HELP: Should be 1500px wide, 625px high, must be a PNG.
+        OVERRIDE:
+          LABEL: Overrides
+          HELP: Custom CSS or Sass/SCSS to evaluate.
+    COMPILE:
+      NAME: Compile
+      SECTION:
+        TITLE: Style Compilation
+        TEXT: 'Click the corresponding button to compile your color scheme. NOTE: This is resource intensive, and takes longer depending on the resources available to your server. Patience is required, you will be returned here when the process is done.'
     PREVIEW:
       TITLE: Style Preview
       INTRODUCTION: This page shows a preview of various HTML-elements and components used in the Admin-plugin, facilitating easier testing of new styles and a complete overview of their visual impact, as close as possible to how they appear in the interface.
       BUTTON:
         DASHBOARD: Dashboard
         PLUGIN: Plugin Options
-      TOC: Table of Contents:
+      TOC: Table of Contents
       WIDGETS:
         TITLE: Widgets
         DESCRIPTION: Widgets are components which display a specific subset of information about Grav as a whole.

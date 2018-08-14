@@ -2,22 +2,22 @@
 
 {% block titlebar %}
 <div class="button-bar">
-  <a class="button" href="{{ base_url }}"><i class="fa fa-reply"></i> {{ "ADMINSTYLES.PREVIEW.BUTTON.DASHBOARD"|tu }}</a>
-  <a class="button" href="{{ base_url }}/plugins/adminstyles"><i class="fa fa-wrench"></i> {{ "ADMINSTYLES.PREVIEW.BUTTON.PLUGIN"|tu }}</a>
+  <a class="button" href="{{ base_url }}"><i class="fa fa-reply"></i> {{ "PLUGIN_ADMINSTYLES.PREVIEW.BUTTON.DASHBOARD"|tu }}</a>
+  <a class="button" href="{{ base_url }}/plugins/adminstyles"><i class="fa fa-wrench"></i> {{ "PLUGIN_ADMINSTYLES.PREVIEW.BUTTON.PLUGIN"|tu }}</a>
 </div>
-<h1><i class="fa fa-th-list"></i> {{ "ADMINSTYLES.PREVIEW.TITLE"|tu }}</h1>
+<h1><i class="fa fa-th-list"></i> {{ "PLUGIN_ADMINSTYLES.PREVIEW.TITLE"|tu }}</h1>
 {% endblock %}
 
 {% block widgets %}
 <section class="admin-block introduction adminstyles">
-  <p>{{ "ADMINSTYLES.PREVIEW.INTRODUCTION"|tu }} {{ "ADMINSTYLES.PREVIEW.TOC"|tu }}</p>
+  <p>{{ "PLUGIN_ADMINSTYLES.PREVIEW.INTRODUCTION"|tu }} {{ "PLUGIN_ADMINSTYLES.PREVIEW.TOC"|tu }}</p>
   <div id="table-of-contents"></div>
 </section>
 
 <section class="admin-block adminstyles">
   <div class="dashboard-notifications-container"></div>
-  <h1 class="section-header">{{ "ADMINSTYLES.PREVIEW.WIDGETS.TITLE"|tu }}</h1>
-  <p>{{ "ADMINSTYLES.PREVIEW.WIDGETS.DESCRIPTION"|tu }}</p>
+  <h1 class="section-header">{{ "PLUGIN_ADMINSTYLES.PREVIEW.WIDGETS.TITLE"|tu }}</h1>
+  <p>{{ "PLUGIN_ADMINSTYLES.PREVIEW.WIDGETS.DESCRIPTION"|tu }}</p>
 </section>
 <div id="admin-dashboard">
   <div class="dashboard-item-flex">
@@ -35,15 +35,15 @@
 </div>
 
 <section class="admin-block adminstyles">
-  <h1 class="section-header">{{ "ADMINSTYLES.PREVIEW.CONTENT.TITLE"|tu }}</h1>
-  <p>{{ "ADMINSTYLES.PREVIEW.CONTENT.DESCRIPTION"|tu }}</p>
+  <h1 class="section-header">{{ "PLUGIN_ADMINSTYLES.PREVIEW.CONTENT.TITLE"|tu }}</h1>
+  <p>{{ "PLUGIN_ADMINSTYLES.PREVIEW.CONTENT.DESCRIPTION"|tu }}</p>
 </section>
 <section class="section-block preview-content adminstyles">
   {% include 'partials/preview-content.html.twig' %}
 </section>
 <section class="admin-block adminstyles">
-  <h1 class="section-header">{{ "ADMINSTYLES.PREVIEW.BUTTONS.TITLE"|tu }}</h1>
-  <p>{{ "ADMINSTYLES.PREVIEW.BUTTONS.DESCRIPTION"|tu }}</p>
+  <h1 class="section-header">{{ "PLUGIN_ADMINSTYLES.PREVIEW.BUTTONS.TITLE"|tu }}</h1>
+  <p>{{ "PLUGIN_ADMINSTYLES.PREVIEW.BUTTONS.DESCRIPTION"|tu }}</p>
 </section>
 <section class="section-block preview-content adminstyles">
   {% include 'partials/preview-buttons.html.twig' %}
@@ -52,40 +52,40 @@
 
 {% block content %}
 <div id="admin-dashboard" class="admin-dashboard">
-  <h1 class="section-header">{{ "ADMINSTYLES.PREVIEW.DASHBOARD.TITLE"|tu }}</h1>
-  <p>{{ "ADMINSTYLES.PREVIEW.DASHBOARD.DESCRIPTION"|tu }}</p>
+  <h1 class="section-header">{{ "PLUGIN_ADMINSTYLES.PREVIEW.DASHBOARD.TITLE"|tu }}</h1>
+  <p>{{ "PLUGIN_ADMINSTYLES.PREVIEW.DASHBOARD.DESCRIPTION"|tu }}</p>
   {% include 'partials/dashboard-pages.html.twig' %}
 </div>
 
 <section class="adminstyles">
-  <h1 class="section-header">{{ "ADMINSTYLES.PREVIEW.FORM.TITLE"|tu }}</h1>
-  <p>{{ "ADMINSTYLES.PREVIEW.FORM.DESCRIPTION"|tu }}</p>
+  <h1 class="section-header">{{ "PLUGIN_ADMINSTYLES.PREVIEW.FORM.TITLE"|tu }}</h1>
+  <p>{{ "PLUGIN_ADMINSTYLES.PREVIEW.FORM.DESCRIPTION"|tu }}</p>
 </section>
 <section id="admin-dashboard">
   {% include 'partials/preview-forms.html.twig' %}
 </section>
 
 <section class="adminstyles">
-  <h1 class="section-header">{{ "ADMINSTYLES.PREVIEW.PAGES.TITLE"|tu }}</h1>
-  <p>{{ "ADMINSTYLES.PREVIEW.PAGES.DESCRIPTION"|tu }}</p>
+  <h1 class="section-header">{{ "PLUGIN_ADMINSTYLES.PREVIEW.PAGES.TITLE"|tu }}</h1>
+  <p>{{ "PLUGIN_ADMINSTYLES.PREVIEW.PAGES.DESCRIPTION"|tu }}</p>
   {% include 'partials/preview-pages.html.twig' %}
 </section>
 
 <section class="adminstyles">
-  <h1 class="section-header">{{ "ADMINSTYLES.PREVIEW.PLUGINS.TITLE"|tu }}</h1>
-  <p>{{ "ADMINSTYLES.PREVIEW.PLUGINS.DESCRIPTION"|tu }}</p>
+  <h1 class="section-header">{{ "PLUGIN_ADMINSTYLES.PREVIEW.PLUGINS.TITLE"|tu }}</h1>
+  <p>{{ "PLUGIN_ADMINSTYLES.PREVIEW.PLUGINS.DESCRIPTION"|tu }}</p>
   {% include 'partials/preview-plugins.html.twig' %}
 </section>
 
 <section class="adminstyles">
-  <h1 class="section-header">{{ "ADMINSTYLES.PREVIEW.THEMES.TITLE"|tu }}</h1>
-  <p>{{ "ADMINSTYLES.PREVIEW.THEMES.DESCRIPTION"|tu }}</p>
+  <h1 class="section-header">{{ "PLUGIN_ADMINSTYLES.PREVIEW.THEMES.TITLE"|tu }}</h1>
+  <p>{{ "PLUGIN_ADMINSTYLES.PREVIEW.THEMES.DESCRIPTION"|tu }}</p>
   {% include 'partials/preview-themes.html.twig' %}
 </section>
 
 <section class="adminstyles">
-  <h1 class="section-header">{{ "ADMINSTYLES.PREVIEW.TYPOGRAPHY.TITLE"|tu }}</h1>
-  <p>{{ "ADMINSTYLES.PREVIEW.TYPOGRAPHY.DESCRIPTION"|tu }}</p>
+  <h1 class="section-header">{{ "PLUGIN_ADMINSTYLES.PREVIEW.TYPOGRAPHY.TITLE"|tu }}</h1>
+  <p>{{ "PLUGIN_ADMINSTYLES.PREVIEW.TYPOGRAPHY.DESCRIPTION"|tu }}</p>
 </section>
 <section class="section-block adminstyles">
   {% include 'partials/preview-typography.html.twig' %}

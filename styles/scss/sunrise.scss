@@ -1,0 +1,63 @@
+// Load Third Party Libraries
+@import "base/configuration/template/base";
+@import "base/template/modules/bourbon_essentials";
+@import "base/template/modules/buttons";
+
+// Theme
+$theme-main: #d56073;
+$theme-secondary: lighten($theme-main, 15%);
+$theme-main-alt: #ec9e69;
+$theme-secondary-alt: darken($theme-main-alt, 15%);
+$theme-text: #000000;
+$theme-text-alt: #ffffff;
+$theme-background: #ffff8f;
+@import "../variables.scss";
+
+$nav-bg: desaturate(darken($theme-main-alt, 5%), 5%);
+$nav-link: $theme-text-alt;
+$nav-selected-bg: darken($nav-bg, 8%);
+$nav-hover-bg: desaturate($theme-main-alt, 5%);
+$page-text: $theme-text;
+$page-link: lighten($theme-text, 5%);
+
+$content-text: darken($theme-secondary-alt, 50%);
+$content-link: darken($theme-secondary-alt, 30%);
+$content-tabs-bg: lighten(#7a4579, 15%);
+$button-bg: darken(mix($theme-main-alt, $content-tabs-bg, 75%), 5%);
+
+// 'Manage Pages'-specific overrides
+.pages-list .page-icon {
+    color: saturate($theme-main, 25%);
+}
+.pages-list .page-icon.not-routable {
+    color: saturate($theme-secondary, 25%);
+}
+.pages-list .page-icon.not-visible {
+    color: lighten($theme-main-alt, 15%);
+}
+.pages-list .page-icon.modular {
+    color: adjust-hue(saturate($theme-main, 25%), 180deg);
+}
+
+@import "base/preset.scss";
+@import "../overrides.scss";
+
+#admin-main .titlebar {
+  text-shadow:
+    -1px -1px 0 rgba($theme-secondary-alt, 0.1),
+    1px -1px 0 rgba($theme-secondary-alt, 0.1),
+    -1px 1px 0 rgba($theme-secondary-alt, 0.1),
+    1px 1px 0 rgba($theme-secondary-alt, 0.1);
+}
+#admin-main .titlebar .button-bar .button {
+  color: mix($theme-background, $button-text, 7.5%);
+}
+.gpm .gpm-item-info .gpm-item-icon {
+  color: rgba($theme-secondary-alt, 0.2);
+}
+#admin-dashboard .primary-accent .chart-loader .ct-label {
+  color: $theme-text-alt;
+}
+i.fa.fa-heart.pulse, i.fa.fa-heart-o.pulse {
+  color: $theme-text;
+}

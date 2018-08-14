@@ -4,11 +4,16 @@ styles:
   - grav_admin
   - metal
   - light
-  - starkcontrast
+  - stark_contrast
+  - dark_ocean
+  - wine
+  - beach
+  - muted_beach
+  - sunrise
+  - navy_sunrise
   - tan
   - grey
   - gold
-  - navy_sunrise
   - arctic
   - amber
   - antique

@@ -1,0 +1,61 @@
+/* Default AdminStyles Variables */
+
+// Logo
+$logo-bg: darken($theme-main-alt, 8%) !default;
+$logo-link: $theme-text-alt !default;
+
+// Nav
+$nav-bg: $theme-main-alt !default;
+$nav-text: $theme-text-alt !default;
+$nav-link: darken($theme-text-alt, 8%) !default;
+$nav-selected-bg: darken($theme-main-alt, 8%) !default;
+$nav-selected-link: $theme-text-alt !default;
+$nav-hover-bg: $theme-main-alt !default;
+$nav-hover-link: $theme-text-alt !default;
+
+// Toolbar
+$toolbar-bg: $theme-main !default;
+$toolbar-text: $theme-text-alt !default;
+
+// Page
+$page-bg: $theme-background !default;
+$page-text: $theme-secondary-alt !default;
+$page-link: darken($theme-secondary-alt, 15%) !default;
+
+// Content
+$content-bg: $theme-text-alt !default;
+$content-text: $theme-secondary-alt !default;
+$content-link: darken($theme-secondary-alt, 15%) !default;
+$content-link2: darken(saturate($theme-main, 75%), 25%) !default;
+$content-header: $theme-secondary-alt !default;
+$content-tabs-bg: $theme-secondary-alt !default;
+$content-tabs-text: $theme-text-alt !default;
+
+// Buttons
+$button-bg: $theme-secondary-alt !default;
+$button-text: $theme-text-alt !default;
+
+// Notice
+$notice-bg: $theme-secondary-alt !default;
+$notice-text: $theme-text-alt !default;
+
+// Updates
+$update-bg: $theme-main-alt !default;
+$update-text: $theme-text-alt !default;
+
+// Critical
+$critical-bg: darken(saturate($theme-main, 75%), 20%) !default;
+$critical-text: $theme-text-alt !default;
+
+// Calculated values
+$primary-accent: primary !default;
+$secondary-accent: secondary !default;
+$tertiary-accent: tertiary !default;
+
+// Initial values
+$primary-accent-bg: $theme-main;
+$primary-accent-fg: $theme-text-alt;
+$secondary-accent-bg: $theme-secondary;
+$secondary-accent-fg: $theme-text-alt;
+$tertiary-accent-bg: $theme-main-alt;
+$tertiary-accent-fg: $theme-text-alt;

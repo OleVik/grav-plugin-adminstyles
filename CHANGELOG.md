@@ -1,3 +1,14 @@
+# v2.0.0
+## 15-08-2018
+
+1. [](#new)
+    * Custom themes from Admin-interface
+    * Added a few default themes
+    * Reworked Plugin-settings in Admin
+2. [](#improved)
+    * Refactored logic, code-quality
+    * Languages.yaml
+
 # v1.1.1
 ## 01-06-2017
 

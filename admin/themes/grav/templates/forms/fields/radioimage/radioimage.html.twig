@@ -10,7 +10,7 @@
           <div class="radioimage-selector">
             <style>
               .card-radioimage.{{ key|e }}::after {
-                background-image: url({{ url('plugin://adminstyles/styles/images') }}/{{ key }}.png);
+                background-image: url({{ url(filefinder(key, '.png', 'user://data/adminstyles/styles/images', 'plugin://adminstyles/styles/images')) }});
               }
             </style>
             <input type="radio"
