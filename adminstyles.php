@@ -65,7 +65,6 @@ class AdminStylesPlugin extends Plugin
      */
     public function onPluginsInitialized()
     {
-        /* Check if Admin-interface */
         if (!$this->isAdmin()) {
             return;
         }
