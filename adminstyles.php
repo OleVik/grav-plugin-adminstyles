@@ -129,9 +129,8 @@ class AdminStylesPlugin extends Plugin
         $inflector = new Inflector();
         $config = Grav::instance()['config']->get('plugins.adminstyles');
         $styles = array();
-        $customs = $config['custom_styles'];
-        if (!empty($customs)) {
-            foreach ($customs as $custom) {
+        if (isset($config['custom_styles']) && !empty($config['custom_styles'])) {
+            foreach ($config['custom_styles'] as $custom) {
                 $key = $inflector->underscorize($custom['name']);
                 $styles[$key] = $custom['name'];
             }
