@@ -1,3 +1,9 @@
+# v2.0.1
+## 17-08-2018
+
+1. [](#bugfix)
+    * GPM error hiding plugins
+
 # v2.0.0
 ## 15-08-2018
 
