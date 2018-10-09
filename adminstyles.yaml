@@ -3,6 +3,7 @@ preview: false
 styles:
   - grav_admin
   - metal
+  - hoth
   - light
   - stark_contrast
   - dark_ocean

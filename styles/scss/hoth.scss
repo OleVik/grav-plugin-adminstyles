@@ -1,0 +1,61 @@
+// Load Third Party Libraries
+@import "base/configuration/template/base";
+@import "base/template/modules/bourbon_essentials";
+@import "base/template/modules/buttons";
+
+// Theme
+$theme-main: #CAD1D9;
+$theme-secondary: #383F45;
+$theme-main-alt: #FAFAFA;
+$theme-secondary-alt: #383F45;
+$theme-text: #383F45;
+$theme-text-alt: #2c2d30;
+$theme-background: #FAFAFA;
+
+$content-bg: #ffffff;
+$button-text: $theme-main-alt;
+$notice-text: $theme-main-alt;
+$content-tabs-text: $theme-main-alt;
+$toolbar-bg: $content-bg;
+$toolbar-text: $theme-text-alt;
+$logo-bg: $theme-background;
+
+$nav-link: darken($theme-text-alt, 12%);
+$nav-hover-link: darken($theme-text-alt, 16%);
+$nav-selected-link: darken($theme-text-alt, 20%);
+
+$button-bg: $theme-secondary-alt;
+$button-text: $theme-main-alt;
+$notice-bg: $theme-secondary-alt;
+$notice-text: $theme-main-alt;
+$update-bg: $theme-secondary-alt;
+$update-text: $theme-main-alt;
+$critical-bg: darken(saturate($theme-secondary-alt, 75%), 20%);
+$critical-text: $theme-main-alt;
+
+@import "../variables.scss";
+
+// 'Manage Pages'-specific overrides
+.pages-list .page-icon {
+    color: saturate($theme-main, 25%);
+}
+.pages-list .page-icon.not-routable {
+    color: saturate($theme-secondary, 25%);
+}
+.pages-list .page-icon.not-visible {
+    color: lighten($theme-main-alt, 15%);
+}
+.pages-list .page-icon.modular {
+    color: adjust-hue(saturate($theme-main, 25%), 180deg);
+}
+
+@import "base/preset.scss";
+@import "../overrides.scss";
+
+#open-handle {
+  background-color: $logo-bg;
+  border-left: 0;
+}
+.ct-label {
+  color: $theme-main-alt;
+}
