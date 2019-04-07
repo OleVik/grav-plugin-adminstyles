@@ -1,3 +1,11 @@
+# v2.1.0
+## 07-04-2019
+
+1. [](#improved)
+    * Code quality
+2. [](#bugfix)
+    * Template conflicts
+
 # v2.0.2
 ## 09-10-2018
 

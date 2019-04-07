@@ -1,4 +1,17 @@
 <?php
+/**
+ * AdminStyles Plugin
+ *
+ * PHP version 7
+ *
+ * @category   Extensions
+ * @package    Grav
+ * @subpackage AdminStyles
+ * @author     Ole Vik <git@olevik.net>
+ * @license    http://www.opensource.org/licenses/mit-license.html MIT License
+ * @link       https://github.com/OleVik/grav-plugin-adminstyles
+ */
+
 namespace Grav\Plugin;
 
 use Grav\Common\Grav;
@@ -21,34 +34,40 @@ use Grav\Plugin\AdminStylesPlugin\Data;
  * Adds multiple custom styles for the Admin-plugin interface
  *
  * Class AdminStylesPlugin
- * 
- * @package Grav\Plugin
- * 
- * @return mixed Style-replacements in Admin-plugin
- * 
- * @license MIT License by Ole Vik
+ *
+ * @category Extensions
+ * @package  Grav\Plugin
+ * @author   Ole Vik <git@olevik.net>
+ * @license  http://www.opensource.org/licenses/mit-license.html MIT License
+ * @link     https://github.com/OleVik/grav-plugin-adminstyles
  */
 class AdminStylesPlugin extends Plugin
 {
     /**
-     * Route for Ajax-Endpoint
+     * Routes for Ajax-Endpoints
+     *
      * @var string
      */
     protected $compileRoute = '/adminstyles-compile';
-
     protected $returnRoute = '/plugins/adminstyles';
 
+    /**
+     * Filename for message store
+     *
+     * @var string
+     */
     protected $messages = 'AdminStylesPluginMessages.txt';
 
     /**
      * Path for preview-page
+     *
      * @var string
      */
     protected $route = 'themepreview';
 
     /**
      * Initialize plugin and subsequent events
-     * 
+     *
      * @return array
      */
     public static function getSubscribedEvents()
@@ -60,7 +79,7 @@ class AdminStylesPlugin extends Plugin
 
     /**
      * Register events and route with Grav
-     * 
+     *
      * @return void
      */
     public function onPluginsInitialized()
@@ -84,7 +103,7 @@ class AdminStylesPlugin extends Plugin
                     'onTwigExtensions' => ['onTwigExtensions', 0],
                     'onPageInitialized' => ['onPageInitialized', 0],
                     'onPagesInitialized' => ['pluginEndpoint', 0],
-                    'onAdminTwigTemplatePaths' => ['onAdminTwigTemplatePaths', -1]
+                    'onAdminTwigTemplatePaths' => ['onAdminTwigTemplatePaths', 0]
                 ]
             );
             if (strpos($uri->path(), $this->config->get('plugins.admin.route') . '/' . $this->route) === false) {
@@ -95,7 +114,7 @@ class AdminStylesPlugin extends Plugin
 
     /**
      * Declare config from plugin-config
-     * 
+     *
      * @return array Plugin configuration
      */
     public function config()
@@ -111,7 +130,7 @@ class AdminStylesPlugin extends Plugin
 
     /**
      * Get type-configuration from plugin
-     * 
+     *
      * @return string Type-field from config
      */
     public static function getConfigType()
@@ -121,7 +140,7 @@ class AdminStylesPlugin extends Plugin
 
     /**
      * Get styles
-     * 
+     *
      * @return array Associative array of styles
      */
     public static function getStyles()
@@ -147,7 +166,7 @@ class AdminStylesPlugin extends Plugin
 
     /**
      * Push styles to Admin-plugin via Assets Manager
-     * 
+     *
      * @return void
      */
     public function onPageInitialized()
@@ -173,9 +192,9 @@ class AdminStylesPlugin extends Plugin
 
     /**
      * Ajax-Endpoint to handle File-operations
-     * 
+     *
      * @return string Prints state of operation
-     * 
+     *
      * @throws \Exception
      */
     public function pluginEndpoint()
@@ -244,7 +263,6 @@ class AdminStylesPlugin extends Plugin
                 $this->messages,
                 $cache->doSet($this->messages, 'Compiled ' . $success, 3600)
             );
-
         }
         header('Location: ' . $returnLocation, true, 307);
         exit();
@@ -256,7 +274,7 @@ class AdminStylesPlugin extends Plugin
      * @param string $file         Filename.
      * @param string $ext          File extension.
      * @param array  ...$locations List of paths.
-     * 
+     *
      * @return string
      */
     public static function fileFinder($file, $ext, ...$locations)
@@ -273,26 +291,32 @@ class AdminStylesPlugin extends Plugin
 
     /**
      * Register templates and page
-     * 
-     * @param RocketTheme\Toolbox\Event\Event $event
-     * 
-     * @return void
+     *
+     * @param RocketTheme\Toolbox\Event\Event $event Event handler
+     *
+     * @return array
      */
     public function onAdminTwigTemplatePaths($event)
     {
-        $event['paths'] = [__DIR__ . '/admin/themes/grav/templates'];
+        $event['paths'] = array_merge(
+            $event['paths'],
+            [__DIR__ . '/admin/themes/grav/templates']
+        );
+        return $event;
     }
 
     /**
      * Register link to page in admin menu
-     * 
+     *
      * @return void
      */
     public function onAdminMenu()
     {
         $config = $this->config();
         if ($config['preview']) {
-            $this->grav['twig']->plugins_hooked_nav['ADMINSTYLES.PREVIEW.TITLE'] = ['route' => $this->route, 'icon' => 'fa-th-list'];
+            $this->grav['twig']->plugins_hooked_nav['ADMINSTYLES.PREVIEW.TITLE'] = [
+                'route' => $this->route, 'icon' => 'fa-th-list'
+            ];
         }
     }
 
