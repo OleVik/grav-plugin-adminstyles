@@ -96,3 +96,6 @@ Made an exceptionally impressive color scheme that warrants inclusion in the plu
 
 - [ ] Per user style
 - [ ] Revisit theme preview page
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOleVik%2Fgrav-plugin-adminstyles.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FOleVik%2Fgrav-plugin-adminstyles?ref=badge_large)
