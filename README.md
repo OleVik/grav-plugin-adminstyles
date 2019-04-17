@@ -24,7 +24,6 @@ The visual configuration - in `admin/plugins/adminstyles` - allows you to select
 
 #### Default
 ![Default](styles/images/grav_admin.png)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOleVik%2Fgrav-plugin-adminstyles.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FOleVik%2Fgrav-plugin-adminstyles?ref=badge_shield)
 
 #### Metal
 ![Metal](styles/images/metal.png)
